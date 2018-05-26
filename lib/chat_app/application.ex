@@ -12,6 +12,7 @@ defmodule ChatApp.Application do
       supervisor(ChatApp.Repo, []),
       # Start the endpoint when the application starts
       supervisor(ChatAppWeb.Endpoint, []),
+      supervisor(ChatAppWeb.Presence, []),
       # Start your own worker by calling: ChatApp.Worker.start_link(arg1, arg2, arg3)
       # worker(ChatApp.Worker, [arg1, arg2, arg3]),
     ]
